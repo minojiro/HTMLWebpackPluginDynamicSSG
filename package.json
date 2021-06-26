@@ -1,0 +1,20 @@
+{
+  "name": "HTMLWebpackPluginDynamicSSG",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "minojiro <minojiro@users.noreply.github.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "ejs-html-loader": "^4.0.1",
+    "ejs-render-loader": "^1.0.0",
+    "fast-glob": "^3.2.5",
+    "html-loader": "^2.1.2",
+    "html-webpack-plugin": "^5.3.2",
+    "webpack": "^5.40.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "scripts": {
+    "dev": "webpack serve --mode=development"
+  }
+}
