@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "outDir": "./controller",
+    "isolatedModules": true,
+    "removeComments": true,
+    "target": "es2019",
+    "moduleResolution": "node"
+  },
+}

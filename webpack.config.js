@@ -1,6 +1,6 @@
-const HTMLWebpackPlugin = require('html-webpack-plugin')
+const { getRoutes } = require('./getRoutes')
 
-module.exports = () => {
+module.exports = async () => {
   return {
     entry: './index.js',
     devServer: {
@@ -11,25 +11,13 @@ module.exports = () => {
         {
           test : /\.ejs$/,
           use  : [
-            'html-loader',
-            'ejs-html-loader',
+            'ejs-compiled-loader',
           ],
         },
       ],
     },
     plugins: [
-      new HTMLWebpackPlugin({
-        filename: 'index.html',
-        template: './templates/index.ejs',
-      }),
-      new HTMLWebpackPlugin({
-        filename: 'news/index.html',
-        template: './templates/news/index.ejs',
-      }),
-      new HTMLWebpackPlugin({
-        filename: 'news/show/index.html',
-        template: './templates/news/show.ejs',
-      }),
+      ...(await getRoutes()),
     ],
   }
 }
